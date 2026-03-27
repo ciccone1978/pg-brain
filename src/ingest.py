@@ -81,7 +81,7 @@ def save_to_db(pdf_name, chunks):
     print("✅ Ingestione completata con successo!")
 
 if __name__ == "__main__":
-    PDF_FILE = "data/pdf/gdpr.pdf" # Assicurati che il file esista
+    PDF_FILE = "data/pdf/test_embedding_verbumlab.pdf" # Assicurati che il file esista
     
     if os.path.exists(PDF_FILE):
         print(f"Inizio elaborazione: {PDF_FILE}")

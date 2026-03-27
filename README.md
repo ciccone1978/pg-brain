@@ -74,7 +74,7 @@ The Python scripts (`src/ingest.py` and `src/query.py`) and `docker-compose.yml`
 ## 📖 Usage
 
 ### 📥 Ingesting Documents
-Place your PDF files in the `data/pdf/` directory. By default, `src/ingest.py` is configured to process `data/pdf/gdpr.pdf`.
+Place your PDF files in the `data/pdf/` directory.
 
 To run the ingestion:
 ```bash
@@ -92,20 +92,3 @@ Start the interactive query session:
 python src/query.py
 ```
 You can then ask questions based on the ingested documents. Type `exit` to quit.
-
-## 🏗️ Project Structure
-
-```text
-.
-├── docker/
-│   └── docker-compose.yml   # Database infrastructure
-├── src/
-│   ├── ingest.py            # PDF processing and vector storage
-│   └── query.py             # RAG logic and search
-├── data/                    # PDF storage and persistent DB data
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
-```
-
-## ⚖️ License
-MIT
