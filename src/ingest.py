@@ -52,6 +52,13 @@ def get_embedding(text):
 def save_to_db(pdf_name, chunks):
     """Connette a Postgres e salva i vettori."""
     conn = psycopg2.connect(**DB_CONFIG)
+    
+    # Crea l'estensione se non esiste
+    with conn.cursor() as cur:
+        cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
+    conn.commit()
+
+    # Registra il tipo vector per psycopg2
     register_vector(conn)
     cur = conn.cursor()
 

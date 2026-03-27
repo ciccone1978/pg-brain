@@ -1,5 +1,8 @@
 import os
 from dotenv import load_dotenv
+import psycopg2
+from pgvector.psycopg2 import register_vector
+from openai import OpenAI
 
 # Carica variabili d'ambiente
 load_dotenv()
